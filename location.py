@@ -24,6 +24,3 @@ class Location:
     @property
     def timezone(self) -> str:
         return self.data.get('timezone')
-
-loc = Location()
-print(loc.geoloc)
