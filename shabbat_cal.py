@@ -4,7 +4,7 @@ from location import Location
 
 class Shabbat:
     def __init__(self):
-        self.url = f"https://api.sunrisesunset.io/json?lat={Location().geoloc[0]}&lng={Location().geoloc[1]}"
+        self.url = f"https://api.sunrise-sunset.org/json?lat={Location().geoloc[0]}&lng={Location().geoloc[1]}&date=today"
         self.respond = requests.get(self.url)
         self.data = self.respond.json()
         self.today = datetime.date.today()
