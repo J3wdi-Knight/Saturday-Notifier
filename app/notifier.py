@@ -1,7 +1,8 @@
 from pathlib import Path
-from notifypy import Notify  # pyright: ignore[reportMissingImports]
+from notifypy import Notify
+import bot
 
-class Notifier:
+class Notice:
     @staticmethod
     def alerm(title=None, message=None) -> None:
         notify = Notify()
@@ -13,3 +14,13 @@ class Notifier:
 
         notify.send()
         return
+
+class Mail:
+    @staticmethod
+    def alerm():
+        pass
+
+class BotSend:
+    @staticmethod
+    def alerm():
+        return bot()  # pyright: ignore[reportCallIssue]

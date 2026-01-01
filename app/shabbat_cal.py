@@ -1,7 +1,7 @@
 import requests
 import datetime
 from location import Location
-from notifier import Notifier
+from notifier import Notice, Mail, BotSend
 
 class Shabbat:
     def __init__(self):
