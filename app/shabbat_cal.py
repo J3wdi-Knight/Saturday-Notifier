@@ -30,11 +30,11 @@ class Shabbat:
                 if not self.notified:
                     self.notified = True
                     if self.weekday == 'Friday' and self.get_time_int(self.now) > self.get_time_int(self.dusk):
-                        return Notifier.alerm('Shabbat is started', 'Rest')
+                        return Notice.alerm('Shabbat is started', 'Rest')
                         # Here's will be link on notifier module
                     elif self.weekday == 'Saturday' and self.get_time_int(self.now) < self.get_time_int(self.dusk):
-                        return Notifier.alerm('Shabbat is going', 'Rest')
+                        return Notice.alerm('Shabbat is going', 'Rest')
                         # Notifier too
                 if self.weekday == 'Saturday' and self.get_time_int(self.now) > self.get_time_int(self.dusk):
-                    return Notifier.alerm('Shabbat is over', 'Go to work')
-        return Notifier.alerm('Not Shabbat', 'Continue to work')
+                    return Notice.alerm('Shabbat is over', 'Go to work')
+        return Notice.alerm('Not Shabbat', 'Continue to work')

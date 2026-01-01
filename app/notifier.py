@@ -15,12 +15,7 @@ class Notice:
         notify.send()
         return
 
-class Mail:
-    @staticmethod
-    def alerm():
-        pass
-
 class BotSend:
     @staticmethod
     def alerm():
-        return bot()  # pyright: ignore[reportCallIssue]
+        return bot()
