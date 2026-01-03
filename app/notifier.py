@@ -18,4 +18,4 @@ class Notice:
 class BotSend:
     @staticmethod
     def alerm():
-        return bot()
+        return bot
