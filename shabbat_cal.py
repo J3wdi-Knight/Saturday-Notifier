@@ -29,7 +29,6 @@ class Shabbat:
         if self.weekday in ['Friday', 'Saturday']:
             self.dusk = self.data.get('results', {}).get('sunset')
             if self.dusk:
-                print(self.get_time_int(self.now), self.get_time_int(self.dusk))
                 if not self.notified:
                     self.notified = True
                     if self.weekday == 'Friday' and self.get_time_int(self.now) > self.get_time_int(self.dusk):
