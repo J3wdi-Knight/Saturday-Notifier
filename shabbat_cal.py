@@ -14,6 +14,7 @@ class Shabbat:
         self.weekday = self.today.strftime('%A')
         self.notified = False
 
+    # Make int from the time [H:M:S PM|AM -> HMS]
     def get_time_int(self, time: str) -> int:
         self.koef = 0
         if time[-2:] == 'PM':
