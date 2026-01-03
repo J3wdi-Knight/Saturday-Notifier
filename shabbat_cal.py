@@ -25,6 +25,7 @@ class Shabbat:
 
     @property
     def start(self):
+        # Check if now's Friday(evening) or Saturday(morning|midday)
         if self.weekday in ['Friday', 'Saturday']:
             self.dusk = self.data.get('results', {}).get('sunset')
             if self.dusk:
